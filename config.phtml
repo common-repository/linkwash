@@ -1,0 +1,55 @@
+<div class="wrap">
+ <h2><?php echo __('Linkwash Konfiguration')?></h2>
+ <form action="" method="post" style="margin: auto; width:400px;">
+ <?php
+ if ($this->error != "") {
+     ?>
+ <div style="background-color:#FFDFDF; color: #CC0000; border-color: #CC0000;">
+  <p style="padding:5px; font-weight:bold;">
+   <?php echo $this->error?>
+  </p>
+ </div>
+     <?php
+ }
+ if ($this->info != "") {
+     ?>
+ <div style="background-color:#E5EFF7; color: #196CCF; border-color: #009EE0;">
+  <p style="padding:5px; font-weight:bold;">
+   <?php echo $this->info?>
+  </p>
+ </div>
+     <?php
+ }
+ if ($this->success != "") {
+     ?>
+ <div style="background-color:#EFFFEF; color: #7CB51A; border-color: #7DB51C;">
+  <p style="padding:5px; font-weight:bold;">
+   <?php echo $this->success?>
+  </p>
+ </div>
+     <?php
+ }
+ ?>
+ <?php 
+ 
+ ?>
+  <p>
+   <?php echo __('Linkwash wandelt die Links auf Ihrer Website automatisch und in Echtzeit in Affiliate-Links um. Mit nur einer Anmeldung können Sie so Tausende von Affiliate-Programmen bewerben und effizient Umsätze generieren. Noch kein Linkwash Publisher?')?>
+   <a href="https://www.linkwash.de/register/"><?php echo __('Bitte registrieren Sie sich hier!')?></a>
+  </p>
+  <h3><?php echo __('Webseiten ID')?></h3>
+  <div style="background-color:#E5EFF7; color: #196CCF; border-color: #009EE0;">
+   <p style="padding:5px; font-weight:bold;">
+    <?php echo __('Bitte geben Sie Ihre Webseiten-ID ein')?>
+   </p>
+  </div>
+  <input type="hidden" name="linkwashIdLast" value="<?php echo $this->_linkwashIdLast?>" />
+  <input type="text" name="linkwashId" value="<?php echo $this->_linkwashId?>" />
+  <br />
+  <br />
+  <input type="submit" name="save" value="<?php echo __('Speichern')?>" />
+  <p>
+  <i><?php echo __('Hinweis: Sie finden Ihre Webseiten-ID in Ihrem Linkwash Account unter „Websites“.')?></i>
+ </p>
+ </form>
+</div>

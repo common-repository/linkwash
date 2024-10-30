@@ -1,0 +1,10 @@
+<script type="text/javascript">
+  var linkwashId = "<?php echo $this->_linkwashId?>";
+  var proto = 'http://';
+  if ("https:" == document.location.protocol) {
+      proto = 'https://';
+  }
+  document.write(
+      unescape('%3Cscript src="'+proto+'www.linkwash.de/js/system.js"%3E%3C/script%3E')
+  );
+</script>
